@@ -2,17 +2,21 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
+const MONGO_URI = process.env.MONGO_URI;
+
 const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.MONGO_URI, {
+  mongoose
+    .connect(MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-    });
-    console.log('MongoDB connected');
-  } catch (error) {
-    console.error(`Error connecting MongoDB: ${error}`);
-    process.exit(1);
-  }
+      dbName: 'MovieWeb',
+    })
+    .then(() => {
+      console.log('Connected to the Database.');
+    })
+    .catch((err) => console.error(err));
 };
 
 export default connectDB;
+
+

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { mainLayoutStyles } from '../styles';
+import { mainLayoutStyles } from '../styles/MainLayout.module.css';
 
 const MainLayout = ({ children }) => (
-  <div css={mainLayoutStyles}>{children}</div>
+  <div className={mainLayoutStyles}>{children}</div>
 );
 
 MainLayout.propTypes = {

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { headerStyles } from '../styles';
+import { headerStyles } from '../styles/Header.module.css';
 
 const Header = () => {
   return (
-    <header css={headerStyles}>
+    <header className={headerStyles}>
       <nav className='nav'>
         <Link to='/' className='logo'>
           Movie List

@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MovieCard from '../molecules/MovieCard';
+import styles from '../styles/MovieList.module.css';
 
 const MovieList = ({ movies }) => (
-  <div className='movie-list'>
+  <div className={styles['movie-list']}>
     {movies.map((movie) => (
       <MovieCard
         key={movie.id}

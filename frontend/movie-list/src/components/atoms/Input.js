@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { inputStyles } from '../styles';
+import styles from '../styles/Input.module.css';
 
 const Input = ({ type, placeholder, value, onChange }) => (
   <input
-    css={inputStyles}
+    className={styles.input}
     type={type}
     placeholder={placeholder}
     value={value}

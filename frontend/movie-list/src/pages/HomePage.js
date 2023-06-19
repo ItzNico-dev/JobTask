@@ -1,10 +1,10 @@
 import React from 'react';
-import { homePage } from '../styles/HomePage.css';
+import styles from './HomePage.module.css';
 
 const HomePage = () => {
   return (
-    <div css={HomePage}>
-      <h1>Welcome to Movie List</h1>
+    <div className={styles['home-page']}>
+      <h1 className={styles.title}>Welcome to Movie List</h1>
       <p>Discover and rate your favorite movies!</p>
     </div>
   );
