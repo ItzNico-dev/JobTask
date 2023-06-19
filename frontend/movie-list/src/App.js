@@ -1,24 +1,29 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage.js';
-import LoginPage from './pages/LoginPage';
-import NotFoundPage from './pages/NotFoundPage';
-import './App.css';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useState } from 'react';
+import MainPage from '../src/pages/HomePage';
+import LoginPage from '../src/pages/LoginPage';
+import NotFoundPage from '../src/pages/NotFoundPage';
 
-const App = () => {
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
   return (
-    <Router>
-      <Route exact path='/'>
-        <HomePage />
-      </Route>
-      <Route path='/login'>
-        <LoginPage />
-      </Route>
-      <Route>
-        <NotFoundPage />
-      </Route>
-    </Router>
+    <Routes>
+      <Route
+        path='/'
+        element={isLoggedIn ? <MainPage /> : <Navigate to='/login' />}
+      />
+      <Route
+        path='/login'
+        element={<LoginPage onLogin={handleLogin} isLoggedIn={isLoggedIn} />}
+      />
+      <Route path='/*' element={<NotFoundPage />} />
+    </Routes>
   );
-};
+}
 
 export default App;
