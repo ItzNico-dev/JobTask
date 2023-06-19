@@ -10,7 +10,7 @@ function LoginPage({ onLogin, isLoggedIn }) {
     e.preventDefault();
 
     if (email === 'user@gmail.com' && password === 'password') {
-      onLogin(); // Call the onLogin prop to update the isLoggedIn state in the parent component
+      onLogin();
       setLoginError(false);
     } else {
       setLoginError(true);
@@ -18,7 +18,7 @@ function LoginPage({ onLogin, isLoggedIn }) {
   };
 
   if (isLoggedIn) {
-    return <Navigate to='/main' />;
+    return <Navigate to='/main' replace />;
   }
 
   return (
