@@ -1,16 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import MovieItem from '../molecules/MovieItem';
-
-const StyledMovieList = styled.div`
-  /* Movie list styles here */
-`;
+import MovieCard from '../molecules/MovieCard';
 
 const MovieList = ({ movies }) => (
-  <StyledMovieList>
+  <div className='movie-list'>
     {movies.map((movie) => (
-      <MovieItem
+      <MovieCard
         key={movie.id}
         title={movie.title}
         genre={movie.genre}
@@ -18,13 +13,13 @@ const MovieList = ({ movies }) => (
         rating={movie.rating}
       />
     ))}
-  </StyledMovieList>
+  </div>
 );
 
 MovieList.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       genre: PropTypes.string.isRequired,
       year: PropTypes.number.isRequired,

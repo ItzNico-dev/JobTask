@@ -1,0 +1,116 @@
+/* styles.css */
+
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* MainLayout Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+/* HomePage Styles */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+/* MovieCard Styles */
+.movie-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.movie-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.movie-info {
+  margin-bottom: 10px;
+}
+
+/* AddMovieForm Styles */
+.add-movie-form {
+  margin-bottom: 20px;
+}
+
+.add-movie-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.add-movie-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* EditMovieForm Styles */
+.edit-movie-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.edit-movie-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* LoginPage Styles */
+.login-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.login-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* NotFoundPage Styles */
+.not-found-message {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 100px;
+}

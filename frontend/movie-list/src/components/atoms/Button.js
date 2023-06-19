@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-
-const StyledButton = styled.button`
-  /* Button styles here */
-`;
+import { buttonStyles } from '../styles';
 
 const Button = ({ text, onClick }) => (
-  <StyledButton onClick={onClick}>{text}</StyledButton>
+  <button css={buttonStyles} onClick={onClick}>
+    {text}
+  </button>
 );
 
 Button.propTypes = {
